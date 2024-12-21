@@ -1,0 +1,23 @@
+<header>
+  <a href="/">Home</a>
+  <a href="/works">Works</a>
+</header>
+
+<main>
+  <section class="work"> <br>
+      <h3>Featured works</h3>
+      <div *ngFor="let work of work_data">
+          <a [routerLink]="'/works/' + work.id">
+              <div class="work__main">
+                  <img [src]="work.main_img" alt="{{ work.title }}" />
+                  <div class="work__left">
+                      <h2>{{ work.title }}</h2>
+                      <p class="year">{{ work.year }}</p>
+                      <p>{{ work.text }}</p>
+                  </div>
+              </div>
+          </a>
+      </div>
+  </section>
+  
+</main>

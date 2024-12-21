@@ -1,0 +1,59 @@
+<header>
+    <a href="/">Home</a>
+    <a href="/works">Works</a>
+</header>
+
+<main>
+    <section class="home">
+        <div class="home__left">
+            <h1>Hi, I am John, <br>
+            Creative Technologist</h1>
+            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            <button>Download Resume</button>
+        </div>
+        <div class="home__right">
+            <img src="/home.png" alt="home">
+        </div>
+    </section>
+
+    <section class="post">
+        <p>Recent posts</p>
+        <div class="post_home">
+            <div class="post__main">
+                <h2>Making a design system from scratch</h2>
+                <div class="post__flex">
+                    <p>12 Feb 2020</p>
+                    <p>|</p>
+                    <p>Design, Pattern</p>
+                </div>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            </div>
+            <div class="post__main">
+                <h2>Making a design system from scratch</h2>
+                <div class="post__flex">
+                    <p>12 Feb 2020</p>
+                    <p>|</p>
+                    <p>Design, Pattern</p>
+                </div>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="work"> <br>
+        <h3>Featured works</h3>
+        <div *ngFor="let work of work_data">
+            <a [routerLink]="'/works/' + work.id">
+                <div class="work__main">
+                    <img [src]="work.main_img" alt="{{ work.title }}" />
+                    <div class="work__left">
+                        <h2>{{ work.title }}</h2>
+                        <p class="year">{{ work.year }}</p>
+                        <p>{{ work.text }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+    
+</main>
